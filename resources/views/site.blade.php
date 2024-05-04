@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="content-language" content="ru" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="shortcut icon" type="image/x-icon" href="{{ asset('logo.svg') }}" />
 
 	<title>Роза ветров онлайн калькулятор</title>
 	<meta name="keywords" content="роза ветров, генератор розы ветров, роза ветров онлайн" />
@@ -24,7 +25,7 @@
 				Исторические данные о погоде взяты с сервиса: <a target="_blank" href="https://open-meteo.com/">Open-Meteo</a>
 			</div>
 			<div class="col text-end">
-				<a href="https://pay.cloudtips.ru/p/99b3202e" target="_blank" onclick="document?.ym(97196096, 'reachGoal', 'donate')">Поблагодарить автора</a>
+				<a href="https://pay.cloudtips.ru/p/99b3202e" target="_blank" onclick="document?.ym ? document?.ym(97196096, 'reachGoal', 'donate') : ()=>{}">Поблагодарить автора</a>
 			</div>
 		</div>
 	</footer>
