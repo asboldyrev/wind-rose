@@ -284,6 +284,7 @@ const chartOptions = ref({
 })
 
 function submit() {
+    document?.ym(97196096, 'reachGoal', 'submit')
     windRoseData({
         latitude: latitude.value,
         longitude: longitude.value,
@@ -304,6 +305,16 @@ function submit() {
 }
 
 submit()
+
+if (process.env.NODE_ENV === 'production') {
+    document?.ym(97196096, 'init', {
+        defer: true,
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true,
+    })
+}
 
 </script>
 
