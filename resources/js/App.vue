@@ -1,7 +1,7 @@
 <template>
     <div class="layout p-3">
         <div class="row">
-            <div class="col">
+            <div class="col-xs-12 col-sm-6 col-md">
                 <div class="input-group mb-3">
                     <span id="inputGroup-sizing-sm" class="input-group-text">Широта</span>
                     <input
@@ -15,7 +15,7 @@
                     >
                 </div>
             </div>
-            <div class="col">
+            <div class="col-xs-12 col-sm-6 col-md">
                 <div class="input-group mb-3">
                     <span id="inputGroup-sizing-sm" class="input-group-text">Долгота</span>
                     <input
@@ -29,7 +29,7 @@
                     >
                 </div>
             </div>
-            <div class="col">
+            <div class="col-xs-12 col-sm-6 col-md">
                 <div class="input-group mb-3">
                     <label class="input-group-text" for="period">Период</label>
                     <select id="period" v-model="period" class="form-select">
@@ -66,7 +66,7 @@
                     </select>
                 </div>
             </div>
-            <div class="col">
+            <div class="col-sm-12 col-lg">
                 <button type="button" class="btn btn-primary" @click="submit">Рассчитать</button>
             </div>
         </div>
@@ -76,10 +76,10 @@
                 <a class="nav-link" :class="{'active': currentTab == 'main'}" aria-current="page" @click="currentTab = 'main'">За год</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" :class="{'active': currentTab == 'direction'}" aria-current="page" @click="currentTab = 'direction'">Направление</a>
+                <a class="nav-link" :class="{'active': currentTab == 'direction'}" aria-current="page" @click="currentTab = 'direction'">Направление ветра</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" :class="{'active': currentTab == 'speed'}" aria-current="page" @click="currentTab = 'speed'">Скорость</a>
+                <a class="nav-link" :class="{'active': currentTab == 'speed'}" aria-current="page" @click="currentTab = 'speed'">Скорость ветра</a>
             </li>
         </ul>
 
@@ -87,7 +87,7 @@
             <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 mb-3">
                 <div class="card card-default">
                     <div class="card-header">
-                        Направление
+                        Направление ветра
                     </div>
                     <div class="card-body">
                         <Radar
@@ -100,7 +100,7 @@
             <div class="col-xs-12 col-sm-6 col-md-5 col-lg-4 mb-3">
                 <div class="card card-default">
                     <div class="card-header">
-                        Скорость
+                        Максимальная скорость ветра
                     </div>
                     <div class="card-body">
                         <Radar
