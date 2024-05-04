@@ -6,7 +6,7 @@
 	<meta http-equiv="content-language" content="ru" />
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Роза ветров</title>
+	<title>Роза ветров онлайн калькулятор</title>
 	<meta name="keywords" content="роза ветров, генератор розы ветров, роза ветров онлайн" />
 	<meta name="description" content="генератор розы ветров позволяет посмотреть розу ветров в любой точке мира за последние несколько лет" />
 
