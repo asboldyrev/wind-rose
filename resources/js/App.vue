@@ -30,6 +30,43 @@
                 </div>
             </div>
             <div class="col">
+                <div class="input-group mb-3">
+                    <label class="input-group-text" for="period">Период</label>
+                    <select id="period" v-model="period" class="form-select">
+                        <option value="1">
+                            1 год
+                        </option>
+                        <option value="2">
+                            2 года
+                        </option>
+                        <option value="3">
+                            3 года
+                        </option>
+                        <option value="4">
+                            4 года
+                        </option>
+                        <option value="5">
+                            5 лет
+                        </option>
+                        <option value="6">
+                            6 лет
+                        </option>
+                        <option value="7">
+                            7 лет
+                        </option>
+                        <option value="8">
+                            8 лет
+                        </option>
+                        <option value="9">
+                            9 лет
+                        </option>
+                        <option value="10">
+                            10 лет
+                        </option>
+                    </select>
+                </div>
+            </div>
+            <div class="col">
                 <button type="button" class="btn btn-primary" @click="submit">Рассчитать</button>
             </div>
         </div>
@@ -121,6 +158,7 @@ ChartJS.register(Title, Tooltip, Legend, CategoryScale, PointElement, RadialLine
 
 const latitude = ref(-34.3591)
 const longitude = ref(18.4725)
+const period = ref(10)
 
 const data = ref({
     direction: [],
@@ -249,6 +287,7 @@ function submit() {
     windRoseData({
         latitude: latitude.value,
         longitude: longitude.value,
+        period: period.value,
     }).then(response => {
         data.value.direction = []
         data.value.speed = []

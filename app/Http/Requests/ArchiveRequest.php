@@ -24,6 +24,7 @@ class ArchiveRequest extends FormRequest
         return [
             'latitude' => ['required', 'decimal:0,6', 'min:-90', 'max:90'],
             'longitude' => ['required', 'decimal:0,6', 'min:-180', 'max:180'],
+            'period' => ['required', 'integer', 'min:1', 'max:10']
             // 'start_date' => ['required', 'date_format:Y-m-d'],
             // 'end_date' => ['nullable'],
             // 'daily' => ['required'],

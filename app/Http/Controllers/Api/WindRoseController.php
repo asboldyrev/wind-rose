@@ -12,8 +12,10 @@ class WindRoseController extends Controller
     public function show(ArchiveRequest $request)
     {
         $data = $request->validated();
+        $period = $data['period'];
+        unset($data['period']);
         $end_date = now()->startOfMonth();
-        $start_date = $end_date->clone()->subYears(10);
+        $start_date = $end_date->clone()->subYears($period);
 
         $client = new Client();
 
